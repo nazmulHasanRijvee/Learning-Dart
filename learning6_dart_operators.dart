@@ -10,9 +10,11 @@ void main () {
 
   print('Multiplication ${a * b}');
 
-  print('Division ${a / b}');
+  print('Division ${b / a}'); // 1.8
 
-  print('Remainder ${a % b}');
+  print('Remainder ${b % a}'); // 4
+
+  print('Division as integer ${b ~/ a}'); // 1
 
   // Relational operators
 
