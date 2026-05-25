@@ -73,6 +73,24 @@ void main () {
   print(growableList);
 
 
+  /// Ungrowable List fixed range
+  // Using List.from() method
+  final testList = [1, 2, 3, 4];
+
+  final ungrowableList = List.from(testList, growable: false);
+
+  // Adding or removing anything will show error because list is fixed
+  // ungrowableList.add(1);
+  // ungrowableList.removeLast(); // will throw error
+  print(ungrowableList);
+
+  // Using List.filled method
+  final ungrowableList2 = List.filled(4, 0, growable: false); // [0, 0, 0, 0]
+
+  //ungrowableList2.add(10); // will show error
+  print(ungrowableList2);
+
+
   /// Run time type
   List<int> newList = [25,36];
 
