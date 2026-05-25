@@ -48,7 +48,6 @@ void main () {
 
 
   /// .remove() removes the item jackfruit from the list
-  // there is also .removeLast() and .removeFirst() to remove last and first item
   fruits.remove('Jackfruit');
   print(fruits);
 
@@ -57,6 +56,30 @@ void main () {
   fruits[1] = 'Jackfruit';
 
   print(fruits);
+
+  /// .removeLast to remove the last item of the list
+  final rmvList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  rmvList.removeLast();
+
+  print(rmvList);
+
+  /// .removeRange(start, end) to remove multiple items from a specified index range
+  rmvList.removeRange(0, 2);
+
+  print(rmvList);
+
+  /// .removeWhere() method takes a lambda (){} method and removes the element
+  // if the condition or bool returns true. It internally gives each element
+  // like a loop in each iteration
+  rmvList.removeWhere((item) => item == 2);
+
+
+  /// .firstWhere() method takes a lambda (){} method and returns the first
+  //  element if the condition matches or true. It internally gives each item
+  // like a loop
+  final int searchedItem = rmvList.firstWhere((item) => item == 10 );
+
+  print(searchedItem); // 10
 
 
   /// Growable List no fixed range, by Default its growable
@@ -221,6 +244,14 @@ void main () {
   final numbers3 = [1, 2, 3, 4, 6, 7, 8, 9];
   final result5 = numbers3.skip(4).take(2).toList(); // [6, 7]
   print(result5);
+
+  /// .fillRange() method to replace an index range of elements with a
+  // specified item
+  final fillList = List.filled(5, 'old'); // [old, old, old, old, old]
+
+  fillList.fillRange(1, 3, 'new'); // [old, new, new, old, old]
+
+  print(fillList);
 
 
 }
