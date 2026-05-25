@@ -253,5 +253,17 @@ void main () {
 
   print(fillList);
 
+  /// List.unmodifiable() method converts a list to an unmodifiable list
+  final modifiableList = [1, 2, 3, 4];
+
+  final unmodifiableList = List.unmodifiable(modifiableList);
+
+  // adding or removing from the unmodifiable list will throw error
+  // unmodifiableList.add(5);
+  // unmodifiableList[0] = 10;
+  // unmodifiableList.removeLast(); // will throw error
+
+  print(unmodifiableList);
+
 
 }
