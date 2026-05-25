@@ -1,14 +1,8 @@
 void main() {
 
-  final List<int> list1 = [1, 2, 3, 4];
-
-  final copiedList = [...list1];
-  print(copiedList);
-
-  final list2 = [
-    ...list1.map((e) => e +1)
-  ];
-
-  print(list2);
+  /// .fillRange() method
+  final fillList = List.filled(5, 'old'); // [old, old, old, old, old]
+  fillList.fillRange(1, 3, 'new'); // [old, new, new, old, old]
+  print(fillList);
 
 }
