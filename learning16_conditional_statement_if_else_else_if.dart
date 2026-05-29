@@ -23,6 +23,12 @@ void main () {
     print('No Discount');
   }
 
+  /// NOTE: If possible always try to use inverted condition using ! in if
+  /// and make it single line
+  // makes code shorter, readable and clean
+  // ignore: dead_code
+  if(!isMember) print('No discount for you');
+
 
   /// else if multiple condition statement
   String signal = 'Red';

@@ -1,6 +1,6 @@
 void main () {
 
-  // Arithmetic operators
+  /// Arithmetic operators
 
   int a = 5 , b = 9;
 
@@ -16,7 +16,7 @@ void main () {
 
   print('Division as integer ${b ~/ a}'); // 1
 
-  // Relational operators
+  /// Relational operators
 
   print('a is equal to b  ${a == b}');
 
@@ -26,7 +26,7 @@ void main () {
 
   print('a is less than b ${a < b}');
 
-  // Logical operators
+  /// Logical operators
 
   bool x = true , y = false;
 
