@@ -56,6 +56,19 @@ void main () {
 
   print('Values ${student.values}'); // .values returns values as tuple
 
+
+  /// Accessing the first and last value of Key and Value of a Map
+  // using .keys and .values with .first and .last
+
+  final firstKey = student.keys.first;
+  final lastKey = student.keys.last;
+  print('First key: $firstKey, Last key: $lastKey of the Map');
+
+  final firstValue = student.values.first;
+  final lastValue = student.values.last;
+  print('First value: $firstValue, Last value: $lastValue of the Map');
+
+
   /// .putIfAbsent() Map method
   // If key doesn't exists adds the key and value, also returns it
   // If key exists does not overwrite and returns existing value
