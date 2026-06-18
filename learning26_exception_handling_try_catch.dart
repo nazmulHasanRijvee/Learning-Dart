@@ -34,6 +34,21 @@ void main () async {
   }
 
 
+  /// catch() also internally gives us Stack trace too which can be printed
+  // and just like debugPrint() theres debugPrintStack() too for printing stack trace
+  try {
+    List<String> products = ['Shirt', 'Pant', 'x'];
+    print(products[5]);
+  } catch (error, stackTrace) {
+    // Showing a custom error but its not good practice
+    print('Error : This product is out of stock');
+    // good practice
+    print('Error : $error');
+    // printing stack trace
+    print('Stack trace : $stackTrace');
+  }
+
+
   /// We can also throw Exception in catch(e) block and and in another try-catch
   // block we can catch the exception (called outer exception), which is
   // wrapping the previous one
