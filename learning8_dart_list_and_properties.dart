@@ -136,11 +136,11 @@ void main () {
 
 
   /// .clear() removes all objects from this list; the length of the list becomes zero.
-  /// The list must be growable.
-  /// final numbers = <int>[1, 2, 3];
-  /// numbers.clear();
-  /// print(numbers.length); // 0
-  /// print(numbers); // []
+  // The list must be growable.
+  // final numbers = <int>[1, 2, 3];
+  // numbers.clear();
+  // print(numbers.length); // 0
+  // print(numbers); // []
 
   newList.clear();
 

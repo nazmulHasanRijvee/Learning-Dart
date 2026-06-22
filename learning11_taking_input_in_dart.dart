@@ -8,7 +8,7 @@ main(){ /// main body of the code that runs
 
   print('Enter Your name:');
 
-  name = stdin.readLineSync(); /// stdin.readLineSync() always takes an string type input
+  name = stdin.readLineSync(); /// stdin.readLineSync() always takes as a String type input
 
   print('Enter your age: ');
   
