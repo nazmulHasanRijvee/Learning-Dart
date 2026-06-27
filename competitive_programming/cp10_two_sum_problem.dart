@@ -11,6 +11,7 @@ void main () {
     if(seen.containsKey(needed)){  // checking if the needed values is found in the dictionary or not
       final output = [seen[needed], i];
       print(output);
+      break; // break or return if answer is found
     } else {
       seen[numbers[i]] = i; // if not found then store current value and its index for future look up
     }
