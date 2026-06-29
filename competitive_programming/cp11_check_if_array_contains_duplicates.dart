@@ -6,6 +6,7 @@ void main () {
 
   final List<int> numbers = [1, 2, 3, 1];
   print(checkDuplicates(numbers));
+  print(alternative(numbers)); // alternative approach by converting to set
 
 }
 
@@ -24,5 +25,16 @@ bool checkDuplicates(List<int> numbers) {
   }
 
   return false;
+
+}
+
+bool alternative(List<int> numbers) {
+
+  final set = numbers.toSet();
+  if (set.length != numbers.length){
+    return true;
+  } else {
+    return false;
+  }
 
 }
