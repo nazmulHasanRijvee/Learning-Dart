@@ -98,5 +98,27 @@ void main () {
   print(convertedNum.padRight(2, '0'));
 
 
+  /// .fromEnvironment() method reads a value from the environment using its key
+  // and returns the value as String. Useful for --dart-define, compile time value injection
+  // NOTE, assigned variable has to be const (compile-time) otherwise if final (run-time)
+  // it will return an empty String cause there's no environment variable in runtime
+  const String baseUrl = String.fromEnvironment('API_URL');
+  print(baseUrl);
+
+  // we can also specify a fall back value in defaultValue property
+  // if environment variable is not found
+  const String baseUrl2 = String.fromEnvironment('API_URL', defaultValue: 'Not Found!' );
+  print(baseUrl2);
+
+
+  /// .fromCharCode() & .fromCharCodes() method
+  // .fromCharCode() method takes a ASCII code of a character and returns the character
+  // for that code. While .fromCharCodes() method takes a List of ASCII char codes
+  // and returns a String by joining all of the characters, according to their codes
+  final value1 = String.fromCharCode(65);
+  print(value1); // A
+
+  final value2 = String.fromCharCodes([65, 66, 67]);
+  print(value2); // ABC
 
 }
