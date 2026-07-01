@@ -2,7 +2,7 @@ void main () {
 
   // do some operation
 
-  int f = fibonacci(6); // // n th position starts from O index which is first or 1
+  int f = fibonacci(6); // n th position starts from O index which is first or 1
   print(f);
   // operation
 
@@ -63,7 +63,7 @@ bool isPalindrome(String str, int left, int right){
   if(str[left] != str[right]) return false;
 
   // recursive case
-  return isPalindrome(str, left+1, right-1);
+  return isPalindrome(str, left+1, right-1); // Two pointer pattern of DSA
 
 }
 
