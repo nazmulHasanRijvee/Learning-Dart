@@ -69,12 +69,20 @@ void main () {
   print(names);
 
 
-  /// converting Set to List
+  /// converting Set to List and list to set
   var nameList = names.toList();
 
   nameList.add("Nazmul"); /// Added a duplicate item cause it allows it
 
   print(nameList);
+
+
+  /// .toSet() method converts List to Set
+  var list = [1, 2, 1, 3];
+
+  var convertedSet = list.toSet();
+
+  print(convertedSet); // {1, 2, 3}
 
 
   /// Set intersection and union like math
