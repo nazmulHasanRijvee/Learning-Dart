@@ -200,6 +200,7 @@ void main () {
   print(myList3);
   myList2.addAll([5,8]);
   print(myList3);
+  // NOTE: Useful in Row()/Column() children: [...List] property
 
 
   /// Same list copying but using List.of()
