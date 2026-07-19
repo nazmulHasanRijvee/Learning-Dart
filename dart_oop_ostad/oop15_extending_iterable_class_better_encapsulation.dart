@@ -11,12 +11,13 @@ void main () async {
 
 }
 
+// Making world iterable (able to loop over it)
 class Words extends Iterable<Letter> {
 
   static final List<Letter> _letters = [];
 
   @override
-  final iterator = _letters.iterator;
+  final iterator = _letters.iterator; // assigning Lists iterator since we are wrapping this to iterate over
 
 }
 
