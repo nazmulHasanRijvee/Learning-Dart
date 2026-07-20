@@ -194,7 +194,7 @@ void main () {
 
 
   /// List copying not referring to the same memory address using [...list]
-  // spread operator
+  // spread operator (...)
   List<int> myList2 = [1, 3, 5];
   var myList3 = [...myList2];
   print(myList3);

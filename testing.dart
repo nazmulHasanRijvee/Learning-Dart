@@ -1,29 +1,5 @@
-void main () async {
-
-  final words = Words();
-
-  for(final letters in words) {
-    print(letters);
-  }
-
-  print(words.first);
+void main () {
 
 
-}
-
-class Words extends Iterable<Letter> {
-
-  static final List<Letter> _letters = [];
-
-  @override
-  final iterator = _letters.iterator;
-
-}
-
-class Letter {
-
-  final String letter;
-
-  Letter({required this.letter});
 
 }
