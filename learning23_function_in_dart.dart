@@ -1,4 +1,5 @@
 /// => operator is the short hand for { return code;} used for single line codes
+// this is also called arrow function
 void sayHello () => print('Hello World');
 
 
@@ -85,6 +86,18 @@ void optionalNamedMethod ({int age = 0, String? name, required double height}) {
 
 }
 
+
+/// Optional parameters using Default value with named parameters
+// Or we can assign a default value for the parameter in the named parameters
+// to make it an Optional Parameter. But it has a default value if already not assigned
+// Only works with optional parameters and more safe and less boiler-plate code then using nullable
+void optionalNamedMethod2 ({int age = 0, String name = 'Unknown', required double height}) {
+
+  print('I am $age years old, my height is ${height.toStringAsFixed(2)}, Name is $name');
+
+}
+
+
 void main () {
 
   
@@ -127,5 +140,10 @@ void main () {
   optionalNamedMethod(age: 24, height: 6.657);
   // using or passing value to optional parameter
   optionalNamedMethod(age: 24, name: 'Nazmul', height: 5.121);
+
+  // optional parameters using default values with named parameters
+  optionalNamedMethod2(age: 24, height: 5.121);
+  // using optional parameter
+  optionalNamedMethod2(age: 24, name: 'Nazmul', height: 5.121);
 
 }
