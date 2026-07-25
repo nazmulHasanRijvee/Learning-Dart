@@ -58,4 +58,27 @@ void main () {
   payment2.cashIn(10000);
   payment2.cashOut(8000);
 
+  print(ApiService().count); // property available in interface, wrong
+
+}
+
+/// Modern interface keyword for clearer and more maintainable API
+// By using interface with abstract it can't inherited (extends) in another file
+// except this file. Which is perfect because interface classes should be implemented
+// (implements) not inherited (extends)
+// Like properties of interface class shouldn’t be available in the implemented
+// class (only methods that needs to be implemented) but if extended then properties
+// or attributes will be available which makes interface abstraction pointless:
+abstract interface class ApiClient {
+  int count = 0;
+  Future<void> getData();
+}
+
+class ApiService extends ApiClient { // inherited property count, not best practice for interface class
+
+  @override
+  Future<void> getData() async {
+
+  }
+
 }
