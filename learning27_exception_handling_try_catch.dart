@@ -115,6 +115,27 @@ void main () async {
 
 
 
+  /// runZonedGuarded(), not every exception (error) can be caught with
+  // “try-catch block” in everywhere, Dart zones help us catch all uncaught
+  // asynchronous errors (not handled by try-catch) in one centralized place.
+  // Using runZonedGuarded(). Takes two parameters:
+  // - A Void Callback method to run in its own guarded error zone
+  // - A Callback method (onError) that gives us error and stackTrace internally which can be printed or logged
+  runZonedGuarded(() {
+
+    final int num = int.parse('a'); // will throw exception
+    print(num);
+
+  },(error, stackTrace) {
+
+    // handle any uncaught errors
+    print('error $error');
+    print('stackTrace ${stackTrace.toString()}');
+
+  });
+
+
+
 }
 
 Future<String> myFunction () async {
