@@ -1,12 +1,9 @@
 class MyClass {
-
   String name = 'Max';
   int age = 30;
-
 }
 
-void main () {
-
+void main() {
   // Big O notation.It is used to measure the time and space complexity
   // of an algorithm. Hierarchy of Big O notation
   // O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n) < O(n!)
@@ -19,7 +16,7 @@ void main () {
   List<int> myList = [1, 2, 3];
   myList.add(4); // O(n)
 
-  for(int value in myList){
+  for (int value in myList) {
     print(value);
   } // O(n)
 
@@ -27,14 +24,11 @@ void main () {
 
   // hash map
   Map<String, dynamic> myMap = {
-    'name' : 'Oliver',
-    'roll' : 123,
-    'visited city' : ['Dhaka', 'Chattogram', 'Khulna'],
-    'Degree' : {
-      'Degree' : 'CSE',
-      'CGPA' : 3.98
-    },
-    'my class' : object
+    'name': 'Oliver',
+    'roll': 123,
+    'visited city': ['Dhaka', 'Chattogram', 'Khulna'],
+    'Degree': {'Degree': 'CSE', 'CGPA': 3.98},
+    'my class': object,
   }; // O(n)
 
   print(myMap['visited city']);
@@ -42,12 +36,11 @@ void main () {
   myMap['name'] = 'Jack';
 
   // Best practice is to avoid this use for loop instead of forEach
-  myMap.forEach(( key, value) {
+  myMap.forEach((key, value) {
     print('Key is $key and value is $value');
   }); // O(n)
 
-  for(MapEntry myEntry in myMap.entries){
+  for (MapEntry myEntry in myMap.entries) {
     print('Key is ${myEntry.key} and value is ${myEntry.value}');
   } // O(n)
-
 }

@@ -9,11 +9,9 @@ abstract class PaymentGateway {
   void cashOut(double amount);
 }
 
-
 /// Inheritance: Child class inherits properties/ variables and methods from the parent class
 // extends keyword is used to inherit from a class
 class Bkash extends PaymentGateway {
-
   // overriding the abstract methods with our own implementation
   // using @override annotation
   @override

@@ -1,7 +1,8 @@
-import 'oop6_class_encapsulation_dart.dart'; /// Importing the Restaurant class file
+import 'oop6_class_encapsulation_dart.dart';
 
-void main () {
+/// Importing the Restaurant class file
 
+void main() {
   Restaurant bfc = Restaurant();
   bfc.order("Chicken Fry");
 
@@ -18,7 +19,6 @@ void main () {
   bfc.setId = 200;
   print(bfc.getId);
 
-
   /// BankAccount example
   BankAccount account = BankAccount(123);
   // accessing private property using getter method
@@ -30,5 +30,4 @@ void main () {
   // setting private property using setter method
   account.setBalance = 1000;
   print(account.getBalance(123));
-
 }

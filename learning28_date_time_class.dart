@@ -8,14 +8,20 @@ void main() {
   print(utcNow); // e.g. 2025-11-08 14:45:10.123Z
 
   /// Custom date and time
-  DateTime birthday = DateTime(2002, 4, 15, 8, 30); // year, month, day, hour, minute
+  DateTime birthday = DateTime(
+    2002,
+    4,
+    15,
+    8,
+    30,
+  ); // year, month, day, hour, minute
   print(birthday); // 2002-04-15 08:30:00.000
 
   /// From milliseconds since epoch (Jan 1 1970 UTC)
   DateTime fromEpoch = DateTime.fromMillisecondsSinceEpoch(1636225200000);
   print(fromEpoch); // 2021-11-07 06:00:00.000
 
-  /// Convert to local
+  /// Convert to local time from UTC
   utcNow = utcNow.toLocal();
   print(utcNow);
 
@@ -34,7 +40,6 @@ void main() {
   print(a.isAtSameMomentAs(b)); // false
 
   /// Difference between dates
-
   DateTime start = DateTime(2025, 11, 1);
   DateTime end = DateTime(2025, 11, 8);
   Duration diff = end.difference(start);
@@ -44,9 +49,7 @@ void main() {
 
   /// Converting DateTime to String and then converting back
   String str = '2025-11-08 20:45:00';
-  DateTime parsed = DateTime.parse(str);
+  DateTime parsed = DateTime.parse(str); // or .tryParse()
   print(parsed);
   print(parsed.toIso8601String());
-
-
 }

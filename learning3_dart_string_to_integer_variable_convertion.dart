@@ -1,12 +1,13 @@
-void main (){
-
+void main() {
   String number = '42';
 
   String doubleNumber = '42.22';
 
   int parseNumber = int.parse(number); // Converts to integer from String
 
-  double parseDouble = double.parse(doubleNumber); // Converts to double from String
+  double parseDouble = double.parse(
+    doubleNumber,
+  ); // Converts to double from String
 
   print(parseNumber); // Shows as integer
 

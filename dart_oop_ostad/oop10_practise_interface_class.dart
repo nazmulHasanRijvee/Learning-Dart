@@ -1,14 +1,11 @@
 abstract class Shape {
-
   /// Abstract method
   // ignore: unused_element
   void _area();
-
 }
 
 /// Circle class implementing Shape
 class Circle implements Shape {
-
   /// Property
   double radius;
 
@@ -18,7 +15,7 @@ class Circle implements Shape {
   /// Implement or override abstract area method
   @override
   void _area() {
-    double result =  3.1416 * radius * radius;
+    double result = 3.1416 * radius * radius;
     print('Circles radius :- $result');
   }
 
@@ -32,7 +29,6 @@ class Circle implements Shape {
 }
 
 void main() {
-
   /// Creating an instance
   Circle circle1 = Circle(radius: 35);
 
@@ -42,6 +38,4 @@ void main() {
   // Update radius using setter
   circle1.setArea = 10;
   circle1.getArea;
-
 }
-

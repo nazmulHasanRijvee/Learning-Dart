@@ -1,9 +1,6 @@
 import 'dart:io';
 
-
-void main () {
-
-
+void main() {
   /// Switch-case
   print('Enter the day : ');
   // .toLowerCase is used to convert string to lower case & null assertion ! is
@@ -11,7 +8,7 @@ void main () {
   // same .toUpperCase exists too
   String? day = stdin.readLineSync()!.toLowerCase();
 
-  switch (day){
+  switch (day) {
     // we don't need break in switch
     case 'friday':
       print('Relax');
@@ -25,7 +22,6 @@ void main () {
     default:
       print('Stay in home');
   }
-
 
   /// Mini project for season
   print('============================');
@@ -45,7 +41,7 @@ void main () {
     case 2 || 3 || 4:
       print('Spring');
     default:
-    print('Invalid input');
+      print('Invalid input');
   }
 
   /// Replacing Switch With Map
@@ -54,7 +50,7 @@ void main () {
   // stability and readability
   String type = 'tea';
 
-  getCaffeine(type) {
+  String getCaffeine(type) {
     switch (type) {
       case 'coffee':
         return 'Here is your coffee!';
@@ -65,12 +61,11 @@ void main () {
       default:
         return 'Unknown beverage type.';
     }
-
   }
 
   print(getCaffeine(type));
 
-  getCaffeine2(type) {
+  String getCaffeine2(type) {
     const caffeine = {
       'coffee': 'Here is your coffee',
       'tea': 'Here is your tea',
@@ -81,5 +76,4 @@ void main () {
   }
 
   print(getCaffeine2(type));
-
 }

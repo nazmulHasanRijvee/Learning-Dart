@@ -1,5 +1,3 @@
 main() {
-
   print('Hello');
-
 }

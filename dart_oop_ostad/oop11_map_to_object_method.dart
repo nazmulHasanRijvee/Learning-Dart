@@ -1,5 +1,4 @@
 class Book {
-
   final String title;
   final String author;
   final String category;
@@ -21,15 +20,13 @@ class Book {
 
   /// Named constructor to create a Book object from a Map
   Book.toBook(Map<String, dynamic> map)
-      : title = map['title'],
-        author = map['author'],
-        category = map['category'],
-        price = map['price'];
-
+    : title = map['title'],
+      author = map['author'],
+      category = map['category'],
+      price = map['price'];
 }
 
-void main () {
-
+void main() {
   final bookMap = {
     'title': 'Data Structures and Algorithms',
     'author': 'John Doe',
@@ -40,5 +37,4 @@ void main () {
   final book = Book.toBook(bookMap);
 
   book.displayInfo();
-
 }

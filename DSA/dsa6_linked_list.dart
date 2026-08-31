@@ -1,33 +1,28 @@
 class Node<T> {
-
   Node({required this.value, this.next});
   final T value;
   Node<T>? next;
 
   @override
-  String toString(){
-    if(next == null){
+  String toString() {
+    if (next == null) {
       return '$value';
     } else {
       return '$value -> ${next.toString()}';
     }
   }
-
 }
 
-
 class LinkedList<T> {
-
   Node<T>? head;
   Node<T>? tail;
 
   bool get isEmpty => head == null;
 
-
   /// Adding at the front
-  void push(T value){
+  void push(T value) {
     final newNode = Node(value: value);
-    if(isEmpty) {
+    if (isEmpty) {
       head = newNode;
       tail = newNode;
       return;
@@ -38,8 +33,8 @@ class LinkedList<T> {
   }
 
   /// Adding at the last
-  void append(T value){
-    if(isEmpty) {
+  void append(T value) {
+    if (isEmpty) {
       push(value);
     }
     final newNode = Node(value: value);
@@ -47,25 +42,21 @@ class LinkedList<T> {
     tail = newNode;
   }
 
-
   /// Adding in between
-  Node<T>? nodeAt(int index){
-
+  Node<T>? nodeAt(int index) {
     var currentNode = head;
     int currentIndex = 0;
 
-    while(currentNode != null && currentIndex < index){
+    while (currentNode != null && currentIndex < index) {
       currentNode = currentNode.next;
       currentIndex += 1;
     }
 
     return currentNode;
-
   }
 
-  Node<T>? insertAfter(Node<T> node, T value){
-
-    if(node == tail) {
+  Node<T>? insertAfter(Node<T> node, T value) {
+    if (node == tail) {
       append(value);
       return tail!;
     }
@@ -74,24 +65,23 @@ class LinkedList<T> {
     newNode.next = node.next;
     node.next = newNode;
     return node.next;
-
   }
 
   /// remove from front
-  T? pop(){
+  T? pop() {
     final value = head?.value;
     head = head?.next;
-    if(isEmpty) tail = null;
+    if (isEmpty) tail = null;
     return value;
   }
 
   /// remove from the end
-  T? removeLast(){
-    if(head?.next == null) return pop();
+  T? removeLast() {
+    if (head?.next == null) return pop();
 
     var currentNode = head;
 
-    while (currentNode!.next != tail){
+    while (currentNode!.next != tail) {
       currentNode = currentNode.next;
     }
 
@@ -103,10 +93,10 @@ class LinkedList<T> {
   }
 
   /// remove in between
-  T? removeAfter(Node<T> node){
+  T? removeAfter(Node<T> node) {
     final nodeToRemove = node.next;
     final value = nodeToRemove?.value;
-    if(nodeToRemove == tail){
+    if (nodeToRemove == tail) {
       tail = node;
     }
     node.next = nodeToRemove?.next;
@@ -114,17 +104,13 @@ class LinkedList<T> {
   }
 
   @override
-  String toString(){
-    if(isEmpty) return 'Empty Linked List';
+  String toString() {
+    if (isEmpty) return 'Empty Linked List';
     return head.toString();
   }
-
-
 }
 
-
-void main(){
-
+void main() {
   final LinkedList<int> linkedList = LinkedList<int>();
 
   linkedList.push(2);
@@ -152,5 +138,4 @@ void main(){
   var nodeToRemove = linkedList.nodeAt(1)!;
   linkedList.removeAfter(nodeToRemove);
   print(linkedList);
-
 }

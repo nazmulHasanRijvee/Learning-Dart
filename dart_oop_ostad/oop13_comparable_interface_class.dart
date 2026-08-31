@@ -1,4 +1,5 @@
-class Student implements Comparable<Student> { // implement Comparable<Student> interface for compareTo() method
+class Student implements Comparable<Student> {
+  // implement Comparable<Student> interface for compareTo() method
 
   final int marks;
   const Student(this.marks);
@@ -11,17 +12,15 @@ class Student implements Comparable<Student> { // implement Comparable<Student> 
     // for reverse order
     // return other.marks.compareTo(marks);
   }
+
   @override
   String toString() {
     return 'Marks: $marks';
   }
 }
-void main () {
-  final List<Student> students = [
-    Student(90),
-    Student(76),
-    Student(81)
-  ];
+
+void main() {
+  final List<Student> students = [Student(90), Student(76), Student(81)];
   students.sort(); // sorts based on marks
   print(students); // [Marks: 76, Marks: 81, Marks: 90]
 }

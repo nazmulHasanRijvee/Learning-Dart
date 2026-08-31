@@ -1,13 +1,10 @@
 import 'dart:io';
 
-void main () {
-
-
+void main() {
   /// Converting to uppercase
   String name1 = "hi, i'm nazmul";
   //  Using .toUpperCase to convert
   print(name1.toUpperCase());
-
 
   /// Converting to lowercase
   print('Enter your name');
@@ -16,8 +13,7 @@ void main () {
   // Cause .toLowerCase or upper dosen't take null
   print(name2!.toLowerCase());
 
-
-  /// Converting the firs letter of words
+  /// Converting the first letter of words
   String text = "hello world from dart";
 
   String titleCase = text
@@ -30,6 +26,4 @@ void main () {
       .join(' ');
 
   print(titleCase);
-
-
 }

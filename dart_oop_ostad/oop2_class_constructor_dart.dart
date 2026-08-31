@@ -5,7 +5,6 @@ class Mobile {
   String modelName;
   String brandName;
 
-
   /// Constructor - A special method that:
   // Runs automatically when creating a new object instance
   // Initializes the object's properties and state
@@ -18,35 +17,31 @@ class Mobile {
   // Use named parameters for better API clarity
   // Mark essential parameters as `required`
   // Keep initialization logic simple and focused
-  Mobile ({required this.year, required this.modelName, required this.brandName});
-
+  Mobile({
+    required this.year,
+    required this.modelName,
+    required this.brandName,
+  });
 
   // Method or function of the class
   // Which can accessed using dot after object
-  charging () {
+  charging() {
     print('Mobile Charging...');
   }
 
-
-  unlock () {
+  unlock() {
     print('Mobile Unlocked...');
   }
 }
 
-
-void main () {
-
-
+void main() {
   /// Creating an object of the Mobile class. Syntax class_name object_name = class_name();
   // And initializing the variables of the class using the constructor
-  Mobile iphone = Mobile(year: 2016,modelName: 'iPhone x',brandName:  'Apple');
-
+  Mobile iphone = Mobile(year: 2016, modelName: 'iPhone x', brandName: 'Apple');
 
   /// Printing the values of the variables of the class using the object
   print('Model Name: ${iphone.modelName}');
   // Calling the method or function of the class using the object
   iphone.charging();
   iphone.unlock();
-
-
 }

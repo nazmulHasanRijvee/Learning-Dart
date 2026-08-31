@@ -1,47 +1,36 @@
 class GraphList<T> {
-
   Map<T, List<T>> adjList = {};
 
-  void addEdge(T src, T dst){
-
+  void addEdge(T src, T dst) {
     adjList.putIfAbsent(src, () => []);
-    adjList.putIfAbsent(dst,()=> []);
+    adjList.putIfAbsent(dst, () => []);
 
     adjList[src]!.add(dst);
     adjList[dst]!.add(src); // remove this when directed graph
   }
 
-  void printGraph(){
-    adjList.forEach((key, dst){
+  void printGraph() {
+    adjList.forEach((key, dst) {
       print('$key --> $dst');
     });
   }
-
 }
 
 class GraphMatrix {
-
   late List<List<int>> matrix;
   int vertices;
 
-  GraphMatrix(this.vertices){
-
-    matrix = List.generate(
-        vertices,
-            (_) => List.filled(vertices, 0)
-    );
-
+  GraphMatrix(this.vertices) {
+    matrix = List.generate(vertices, (_) => List.filled(vertices, 0));
   }
 
-  void addEdge (int src, int dst){
+  void addEdge(int src, int dst) {
     matrix[src][dst] = 1;
     matrix[dst][src] = 1; // remove this when directed graph
   }
-
 }
 
-void main(){
-
+void main() {
   final GraphList<int> graph = GraphList<int>();
 
   graph.addEdge(2, 3);
@@ -54,5 +43,4 @@ void main(){
   graph.addEdge(4, 9);
 
   graph.printGraph();
-
 }

@@ -1,8 +1,6 @@
 import 'dart:io';
 
-void main () {
-
-
+void main() {
   /// if-else conditional statement
   int age = 18;
 
@@ -12,13 +10,12 @@ void main () {
     print('Unable to vote');
   }
 
-
   bool isMember = true;
 
   // if runs the code if the condition is true
   if (isMember) {
     print('10% Discount');
-  // ignore: dead_code
+    // ignore: dead_code
   } else {
     print('No Discount');
   }
@@ -27,8 +24,7 @@ void main () {
   /// and make it single line
   // makes code shorter, readable and clean
   // ignore: dead_code
-  if(!isMember) print('No discount for you');
-
+  if (!isMember) print('No discount for you');
 
   /// else if multiple condition statement
   String signal = 'Red';
@@ -41,7 +37,6 @@ void main () {
     print('Stop !!!');
   }
 
-
   /// Using or || in conditional statement
   String location = 'Mirpur';
 
@@ -50,7 +45,6 @@ void main () {
   } else {
     print('Sorry delivery not possible');
   }
-
 
   /// Nested if-else conditional statement
   String location2 = 'Gulshan';
@@ -64,7 +58,6 @@ void main () {
   } else {
     print('Sorry delivery not possible');
   }
-
 
   /// Marking using if-else
   int marks = 85;
@@ -83,13 +76,11 @@ void main () {
     print('F (Fail)');
   }
 
-
   /// ternary operator short hand if-else
   String yes = "ok";
   // condition ? if the condition is true : or if the condition false
-  String operation = yes == 'ok'? 'No problem' : 'Problem';
+  String operation = yes == 'ok' ? 'No problem' : 'Problem';
   print(operation);
-
 
   /// Mini project log in
   print("=======================================");
@@ -103,12 +94,16 @@ void main () {
   if (username == 'Nazmul' && password == '1234') {
     print('Log in successful');
   } else if (username != 'Nazmul' && password == '1234') {
-    print('Password is correct. But username is incorrect, try again with correct username');
+    print(
+      'Password is correct. But username is incorrect, try again with correct username',
+    );
   } else if (username == 'Nazmul' && password != '1234') {
-    print('Username is correct. But password is incorrect, try again with correct password');
+    print(
+      'Username is correct. But password is incorrect, try again with correct password',
+    );
   } else {
-    print('Both username and password is incorrect, Try again with correct username & password');
+    print(
+      'Both username and password is incorrect, Try again with correct username & password',
+    );
   }
-
-
 }

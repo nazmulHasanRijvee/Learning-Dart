@@ -1,8 +1,7 @@
-void main () {
-
+void main() {
   /// Arithmetic operators
 
-  int a = 5 , b = 9;
+  int a = 5, b = 9;
 
   print('Addition ${a + b}');
 
@@ -28,14 +27,14 @@ void main () {
 
   /// Logical operators
 
-  bool x = true , y = false;
+  bool x = true, y = false;
 
   print('x and y ${x && y}');
 
   // ignore: dead_code
   print('x or y ${x || y}');
 
-  print('not x ${ !x }');
+  print('not x ${!x}');
 
   // Unary operators
 
@@ -50,5 +49,4 @@ void main () {
   print(v);
 
   print(c);
-
 }

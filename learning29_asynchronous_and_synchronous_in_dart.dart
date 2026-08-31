@@ -1,8 +1,6 @@
 import 'dart:async'; // Required for Future, Future.delayed, TimeoutException
 
 void main() async {
-
-
   print('--- Dart Synchronous Example ---');
   // In Dart, by default everything is synchronous. Synchronous blocks other operations
   // from executing until its complete. So, operation3 can’t be printed before
@@ -14,7 +12,6 @@ void main() async {
   print('Operation1 (Synchronous)');
   synchronousExample();
   print('Operation3 (Synchronous)');
-
 
   print('\n--- Dart Asynchronous Future Example ---');
   // Future is like a promise that it will return something. It has two states:
@@ -33,7 +30,6 @@ void main() async {
   // Give some time for the async operation to complete before the next section starts
   await Future.delayed(Duration(seconds: 4));
 
-
   print('\n--- Dart Asynchronous Await Example ---');
   // `await` can only be used in an asynchronous function. It tells the compiler to wait
   // until that asynchronous operation is complete. Basically, it turns an async call to sync.
@@ -49,7 +45,6 @@ void main() async {
   int res = await asynchronousAwaitExample();
   print('Result from Await: $res');
   print('Operation3 (Asynchronous Await)');
-
 
   print('\n--- Future.wait Example ---');
   // Future.wait() runs multiple futures in parallel and waits for all of them to complete.
@@ -76,14 +71,9 @@ void main() async {
   }
 
   print('Starting Future.wait (void)');
-  await Future.wait<void>([
-    fetchWeather(),
-    getUserProfile(),
-    loadSettings(),
-  ]);
+  await Future.wait<void>([fetchWeather(), getUserProfile(), loadSettings()]);
   print(" All Future.wait (void) operations done!");
   // Note: If we use Future.wait() in initState() we do not need to use await or convert the function to async.
-
 
   print('\n--- Future.wait with Return Values Example ---');
   // By default, Future.wait() expects to return a value or list of values.
@@ -106,7 +96,6 @@ void main() async {
     fetchTemperature(),
   ]);
   print("Future.wait results: $results"); // ["☀️ Sunny", "27°C"]
-
 
   print('\n--- Future.wait with No Return Values (Explicit void) Example ---');
   // In order to tell Dart that Future.wait() does not return a value, just calls
@@ -139,6 +128,7 @@ void main() async {
     ]);
     print("✅ All setup done in loadAppData!");
   }
+
   await loadAppData();
 
   print('\n--- Future.any Example ---');
@@ -167,7 +157,9 @@ void main() async {
 
   print('Starting Future.any (with return values)');
   final anyResult = await Future.any([serverA(), serverB(), serverC()]);
-  print("Future.any result: $anyResult"); // Shows B finished as it is the fastest one.
+  print(
+    "Future.any result: $anyResult",
+  ); // Shows B finished as it is the fastest one.
 
   // Note: If we use Future.any() in initState() we do not need to use await or convert the function to async.
 }

@@ -4,7 +4,8 @@ class Adder {
     return a + b;
   }
 }
-void main () {
+
+void main() {
   final add = Adder();
   final result = add(2, 3); // Object becomes callable instead of add.call()
   print(result); // 5

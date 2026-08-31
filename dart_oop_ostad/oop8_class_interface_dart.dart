@@ -1,17 +1,13 @@
 /// Interface class example
 // An interface is just a contract it says any class that implements me must define these methods.
 abstract class PaymentGateway {
-
   // abstract methods or functions
-  void cashOut (double amount);
-  void cashIn (double amount);
+  void cashOut(double amount);
+  void cashIn(double amount);
 }
-
 
 /// Implementing the interface class using 'implements' keyword
 class Bkash implements PaymentGateway {
-
-
   // overriding the abstract methods with our own implementation
   // using @override annotation
   @override
@@ -25,11 +21,8 @@ class Bkash implements PaymentGateway {
   }
 }
 
-
 // Implementing the interface class using 'implements' keyword
 class Nagad implements PaymentGateway {
-
-
   // overriding the abstract methods with our own implementation
   // using @override annotation
   @override
@@ -43,8 +36,7 @@ class Nagad implements PaymentGateway {
   }
 }
 
-void main () {
-
+void main() {
   /// creating object of the interface class using Polymorphism
   // Polymorphism allows our PaymentGateway variable to point to different
   // objects (Bkash, Nagad), and the correct overridden method is executed at
@@ -59,7 +51,6 @@ void main () {
   payment2.cashOut(8000);
 
   print(ApiService().count); // property available in interface, wrong
-
 }
 
 /// Modern interface keyword for clearer and more maintainable API
@@ -74,11 +65,9 @@ abstract interface class ApiClient {
   Future<void> getData();
 }
 
-class ApiService extends ApiClient { // inherited property count, not best practice for interface class
+class ApiService extends ApiClient {
+  // inherited property count, not best practice for interface class
 
   @override
-  Future<void> getData() async {
-
-  }
-
+  Future<void> getData() async {}
 }

@@ -1,5 +1,4 @@
 void main() {
-
   /// .toStringAsFixed() method
   // converts a numeric value (int or double) to a String with a fixed number of
   // decimal places.  It rounds the number to the specified number of digits
@@ -20,5 +19,4 @@ void main() {
 
   String result2 = num2.toStringAsFixed(0);
   print(result2); // Output: 2
-
 }

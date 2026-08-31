@@ -19,7 +19,6 @@ class Stack<T> {
     return _elements.last;
   }
 
-
   bool get isEmpty => _elements.isEmpty;
   bool get isNotEmpty => _elements.isNotEmpty;
   int get size => _elements.length;
@@ -29,46 +28,41 @@ class Stack<T> {
   }
 
   @override
-  String toString(){
+  String toString() {
     return '----------Top----------\n'
         '${_elements.reversed.join('\n')}\n'
         '------------bottom---------';
   }
-
 }
 
-class Queue<T>{
-
+class Queue<T> {
   final List<T> _elements = [];
 
-  void enqueue(T value){
+  void enqueue(T value) {
     _elements.add(value);
   }
 
-  T dequeue(){
-    if(_elements.isEmpty){
+  T dequeue() {
+    if (_elements.isEmpty) {
       throw Exception('The queue is empty.');
     }
     return _elements.removeAt(0);
   }
 
-  void clear(){
+  void clear() {
     _elements.clear();
   }
 
   @override
-  String toString(){
+  String toString() {
     return '$_elements';
   }
 
   bool get isEmpty => _elements.isEmpty;
   bool get isNotEmpty => _elements.isNotEmpty;
-
 }
 
-
-void main () {
-
+void main() {
   //Stack<int> stack = Stack();
   // stack.push(10);
   // stack.push(5);
@@ -80,13 +74,13 @@ void main () {
   // print('Top item: ${stack.peek()}');
 
   // ignore: unused_element
-  bool checkBalance(String expr){
+  bool checkBalance(String expr) {
     Stack<String> stack = Stack();
-    for(var ch in expr.split('')){
-      if(ch == '('){
+    for (var ch in expr.split('')) {
+      if (ch == '(') {
         stack.push(ch);
-      } else if (ch == ')'){
-        if(stack.isEmpty) return false;
+      } else if (ch == ')') {
+        if (stack.isEmpty) return false;
         stack.pop();
       }
     }
@@ -109,5 +103,4 @@ void main () {
   print(queue);
   queue.dequeue();
   print(queue);
-
 }

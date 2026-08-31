@@ -1,5 +1,4 @@
 class User {
-
   final String name;
   const User(this.name);
 
@@ -18,7 +17,7 @@ class User {
   int get hashCode => name.hashCode;
 }
 
-void main () {
+void main() {
   final u1 = User("Nazmul");
   final u2 = User("Nazmul");
   print(u1 == u2); // true

@@ -1,5 +1,4 @@
-void main () {
-
+void main() {
   final list1 = [1, 2, 3, 4];
   final string1 = 'Flutter';
 
@@ -8,7 +7,7 @@ void main () {
   // to find if its not certain type
   final bool isList = string1 is List;
   final bool isNotInt = list1 is! int;
-  final bool isNotString = list1 is !String;
+  final bool isNotString = list1 is! String;
 
   print(isList);
   print(isNotInt);
@@ -18,7 +17,6 @@ void main () {
   // Checking if an object is of a specific class type
   Animal myAnimal = Dog('Buddy');
   Animal aDuck = Duck('Donald');
-
 
   // When Dart knows an object is of a certain type due to an 'is' check,
   // it automatically promotes its type within that scope, allowing access
@@ -33,11 +31,12 @@ void main () {
   // Checking if an object implements an interface class
   print('\n--- Interface Checking with "is" ---');
   if (aDuck is Swimmer) {
-    print('${aDuck.name} is a Swimmer.'); // Type promotion also works for interfaces
+    print(
+      '${aDuck.name} is a Swimmer.',
+    ); // Type promotion also works for interfaces
   } else {
     aDuck.makeSound();
   }
-
 }
 
 // Define a base class

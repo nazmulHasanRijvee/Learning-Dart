@@ -1,5 +1,4 @@
-void main (){
-
+void main() {
   var dynamicVar = 42; // full number is assigned so integer
 
   int fixedVar = 100; // integer
@@ -27,6 +26,4 @@ void main (){
   print(variable); // prints integer value 2
 
   print(isFun); // prints bool value true
-
-
 }

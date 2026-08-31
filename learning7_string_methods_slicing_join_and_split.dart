@@ -1,5 +1,4 @@
-void main () {
-
+void main() {
   /// String slicing using string indexing
   String word = "Dart";
   print(word[0]); // D
@@ -59,7 +58,6 @@ void main () {
   spaced.trimRight();
   print(spaced); // "   Hello Dart!"
 
-
   /// .contains() checks if a string contains a substring
   String phrase = "Learning Dart is fun";
   print(phrase.contains("Dart")); // true
@@ -94,9 +92,8 @@ void main () {
   // It only works with String data type
   int num = 5;
   String convertedNum = num.toString();
-  print(convertedNum.padLeft(2, '0'));
-  print(convertedNum.padRight(2, '0'));
-
+  print(convertedNum.padLeft(2, '0')); // 05
+  print(convertedNum.padRight(2, '0')); // 50
 
   /// .fromEnvironment() method reads a value from the environment using its key
   // and returns the value as String. Useful for --dart-define, compile time value injection
@@ -107,9 +104,11 @@ void main () {
 
   // we can also specify a fall back value in defaultValue property
   // if environment variable is not found
-  const String baseUrl2 = String.fromEnvironment('API_URL', defaultValue: 'Not Found!' );
+  const String baseUrl2 = String.fromEnvironment(
+    'API_URL',
+    defaultValue: 'Not Found!',
+  );
   print(baseUrl2);
-
 
   /// .fromCharCode() & .fromCharCodes() method
   // .fromCharCode() method takes a ASCII code of a character and returns the character
@@ -120,5 +119,4 @@ void main () {
 
   final value2 = String.fromCharCodes([65, 66, 67]);
   print(value2); // ABC
-
 }

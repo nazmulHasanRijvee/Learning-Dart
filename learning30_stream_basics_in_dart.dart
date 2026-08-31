@@ -1,5 +1,4 @@
-void main () async {
-
+void main() async {
   /// listen to the Stream using .listen method
   allNumbers().listen((data) {
     print(data);
@@ -10,7 +9,6 @@ void main () async {
   await for (final n in numbers()) {
     print(n);
   }
-
 }
 
 /// Defining a method that will return a Stream
@@ -20,9 +18,9 @@ Stream<int> numbers() async* {
   yield 2;
   yield 3; // yield instead of return in Stream
 }
+
 Stream<int> allNumbers() async* {
   yield 0;
   yield* numbers(); // yield* emit all event from another stream
   yield 4;
-
 }

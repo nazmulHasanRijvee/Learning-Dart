@@ -1,5 +1,4 @@
-void main () {
-
+void main() {
   /// const executes on compile time and once assigned value can't be changed
   /// even in run time like universal truth
   const double pi2 = 3.1416;
@@ -18,5 +17,4 @@ void main () {
   final myList = [];
   myList.addAll([1, 3, 4]);
   print(myList);
-
 }

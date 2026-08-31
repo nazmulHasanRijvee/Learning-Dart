@@ -1,5 +1,4 @@
 void main() {
-
   /// This methods are more optimized and provides clean code with readability
 
   /// .forEach() loop
@@ -12,7 +11,6 @@ void main() {
 
   print(list2); // [11, 31, 51, 61]
 
-
   /// List.generate(), syntax: List.generate(length, (length){return ...})
   // Optimized
   List<int> list3 = List.generate(10, (index) => index + 1);
@@ -23,30 +21,22 @@ void main() {
   // of maps. It returns a list of Iterables<T>
   // optimized
   List<Map<String, dynamic>> myList = [
-    {
-      'id' : 01,
-      'name': 'Nazmul'
-    },
-    {
-      'id': 02,
-      'name' : 'Alex'
-    },
-    {
-      'id': 03,
-      'name' : 'Max'
-    }
+    {'id': 01, 'name': 'Nazmul'},
+    {'id': 02, 'name': 'Alex'},
+    {'id': 03, 'name': 'Max'},
   ];
 
   // use .toList() method to convert iterables to list
-  var myList2 = myList.map((e)=> e['id']).toList();
+  var myList2 = myList.map((e) => e['id']).toList();
   print(myList2);
-
 
   /// .fold() method for accumulation a collection or lists values
   // It has takes two arguments, initialValue and a callback method
   List<int> list4 = [1, 3, 4, 5];
 
-  final total = list4.fold<int>(0, (previousValue, element ) => previousValue + element);
+  final total = list4.fold<int>(
+    0,
+    (previousValue, element) => previousValue + element,
+  );
   print(total); // 13
-
 }

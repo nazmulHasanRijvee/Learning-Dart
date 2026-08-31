@@ -2,69 +2,59 @@ import 'dart:collection';
 
 /// Binary Tree
 class BinaryTreeNode<T> {
-
   T value;
   BinaryTreeNode<T>? left;
   BinaryTreeNode<T>? right;
 
   BinaryTreeNode(this.value);
-
 }
 
 /// Pre-order
 // root -> left -> right
-void preOrder(BinaryTreeNode? node){
-
-  if(node == null) return;
+void preOrder(BinaryTreeNode? node) {
+  if (node == null) return;
 
   print(node.value);
 
   preOrder(node.left); // recursion
   preOrder(node.right);
-
 }
 
 /// In-order
 // left -> root -> right
-void inOrder(BinaryTreeNode? node){
-
-  if(node == null) return;
+void inOrder(BinaryTreeNode? node) {
+  if (node == null) return;
 
   inOrder(node.left);
   print(node.value);
   inOrder(node.right);
-
 }
 
 /// Post-order
 // left -> right -> root
-void postOrder(BinaryTreeNode? node){
-  if(node == null) return;
+void postOrder(BinaryTreeNode? node) {
+  if (node == null) return;
 
   postOrder(node.left);
   postOrder(node.right);
   print(node.value);
-
 }
 
 ///
-void levelOrder(BinaryTreeNode? root){
-  if(root == null) return;
+void levelOrder(BinaryTreeNode? root) {
+  if (root == null) return;
 
   Queue queue = Queue();
 
   queue.add(root);
 
-  while(queue.isNotEmpty){
+  while (queue.isNotEmpty) {
     BinaryTreeNode node = queue.removeFirst();
     print(node.value);
-    if(node.left != null) queue.add(node.left);
-    if(node.right != null) queue.add(node.right);
-
+    if (node.left != null) queue.add(node.left);
+    if (node.right != null) queue.add(node.right);
   }
-
 }
-
 
 void main() {
   /// Creating nodes
