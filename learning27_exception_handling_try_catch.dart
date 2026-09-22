@@ -156,6 +156,8 @@ void main() async {
       print('stackTrace ${stackTrace.toString()}');
     },
   );
+
+  /// NOTE: For Flutter it has been replaced with PlatformDispatcher.instance.onError
 }
 
 Future<String> myFunction() async {

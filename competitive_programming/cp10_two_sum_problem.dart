@@ -13,8 +13,7 @@ void main() {
       print(output);
       break; // break or return if answer is found
     } else {
-      seen[numbers[i]] =
-          i; // if not found then store current value and its index for future look up
+      seen[numbers[i]] = i; // if not found then store current value and its index for future look up
     }
   }
 }

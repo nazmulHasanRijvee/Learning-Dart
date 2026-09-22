@@ -26,8 +26,7 @@ void main() {
   /// Null-coalescing Assignment
   String? city;
 
-  city ??=
-      "Dhaka"; // Assign "Dhaka" only if city is null, assign a value only if the variable is null
+  city ??= "Dhaka"; // Assign "Dhaka" only if city is null, assign a value only if the variable is null
 
   print(city); // "Dhaka"
 
@@ -47,6 +46,5 @@ void main() {
   print(token); // ✅ Works fine
 }
 
-late String
-token; // Sometimes we can’t initialize a variable immediately, but we promise to do it before using it
+late String token; // Sometimes we can’t initialize a variable immediately, but we promise to do it before using it
 // that's where late comes in
