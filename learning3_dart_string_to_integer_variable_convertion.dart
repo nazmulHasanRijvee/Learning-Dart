@@ -3,7 +3,8 @@ void main() {
 
   String doubleNumber = '42.22';
 
-  int parseNumber = int.parse(number); // Converts to integer from String
+  /// int.parse() converts to integer from String
+  int parseNumber = int.parse(number);
 
   double parseDouble = double.parse(
     doubleNumber,
@@ -13,9 +14,11 @@ void main() {
 
   print(parseDouble); // Shows as double
 
+  /// .toString() method Converts to String from integer
   print(parseNumber.toString()); // Converts to String from integer
 
   double price = 99.99;
 
-  print(price.round()); // Rounds up to nearest round number
+  /// .round() method Rounds up to nearest round number
+  print(price.round());
 }

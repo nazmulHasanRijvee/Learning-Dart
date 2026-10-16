@@ -102,7 +102,7 @@ void main() {
   const String baseUrl = String.fromEnvironment('API_URL');
   print(baseUrl);
 
-  // we can also specify a fall back value in defaultValue property
+  // we can also specify a fall back value in defaultValue: property
   // if environment variable is not found
   const String baseUrl2 = String.fromEnvironment(
     'API_URL',

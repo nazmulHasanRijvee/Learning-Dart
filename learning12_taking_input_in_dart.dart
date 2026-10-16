@@ -1,23 +1,17 @@
-import 'dart:io';
+import 'dart:io'; // imports dart
 
-/// imports dart
-
-main() {
+void main() {
   /// main body of the code that runs
 
-  String? name;
-
   /// declaring a nullable string variable
-
-  int? age;
-
+  String? name;
   /// declaring a nullable integer variable which is a must for taking input
+  int? age;
 
   print('Enter Your name:');
 
-  name = stdin.readLineSync();
-
   /// stdin.readLineSync() always takes as a String type input
+  name = stdin.readLineSync();
 
   print('Enter your age: ');
 

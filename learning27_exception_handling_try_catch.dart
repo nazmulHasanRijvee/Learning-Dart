@@ -118,19 +118,24 @@ void main() async {
     final String response = await myFunction().timeout(
       const Duration(seconds: 15),
     );
+
     print(response);
   } on TimeoutException catch (error) {
     // Catches exceptions when an asynchronous operation takes too long
     print('Timed Out, Error: $error');
+
   } on SocketException catch (error) {
     // Catches exceptions related to network issues (e.g., no internet connection)
     print('No Internet Connection Found, error: $error');
+
   } on FormatException catch (error) {
     // Catches exceptions when data is not in an expected format (e.g., int.parse('abc'))
     print('Format Error: $error');
+
   } on RangeError catch (error) {
     // Catches exceptions when an index is out of bounds for a list or string
     print('Range Error: $error');
+
   } catch (error) {
     // A generic catch block for any other unhandled exceptions
     print('An unexpected error occurred: $error');

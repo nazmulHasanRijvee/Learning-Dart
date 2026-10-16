@@ -1,6 +1,5 @@
 void main() {
   /// Declaring the map
-
   Map<String, dynamic> student = {
     // Keys are strings and values are dynamic
 
@@ -26,17 +25,17 @@ void main() {
   student['city'] = 'Dhaka';
   print('Student location ${student['city']}');
 
-  /// Deleting key and its values
-  student.remove('age'); // .remove() deletes key and its value
+  /// .remove() for Deleting key and its values
+  student.remove('age');
   print('Student details $student');
 
-  /// checking keys in map
+  /// .containsKey() checks if a KEY is present in a Map
   if (student.containsKey('grade')) {
-    // .containsKey() checks if a key is present
     print('yes');
   } else {
     print('no');
   }
+  // NOTE: There's also .containsValue() too
 
   /// getting keys of the map as tuple
   print('Keys ${student.keys}'); // .keys returns keys as tuple
@@ -46,9 +45,9 @@ void main() {
 
   /// Accessing the first and last value of Key and Value of a Map
   // using .keys and .values with .first and .last
-
   final firstKey = student.keys.first;
   final lastKey = student.keys.last;
+
   print('First key: $firstKey, Last key: $lastKey of the Map');
 
   final firstValue = student.values.first;
@@ -72,8 +71,8 @@ void main() {
 
   for (var word in words) {
     grouped.putIfAbsent(word[0], () => []).add(word);
-    //                              ↑ creates empty list if key missing
-    //                                        ↑ then adds word to that list
+                                    // ↑ creates empty list if key missing
+                                         // ↑ then adds word to that list
   }
 
   print(grouped); // {a: [apple, ant, avocado], b: [bat, banana]}

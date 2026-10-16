@@ -40,7 +40,7 @@ void main() {
 }
 
 // Define a base class
-class Animal {
+base class Animal {
   String name;
   Animal(this.name);
   void makeSound() {
@@ -49,7 +49,7 @@ class Animal {
 }
 
 // Define a subclass
-class Dog extends Animal {
+final class Dog extends Animal {
   Dog(super.name);
   void bark() {
     print('$name barks loudly!');
@@ -63,7 +63,7 @@ abstract class Swimmer {
 }
 
 // Implement the Swimmer interface
-class Duck extends Animal implements Swimmer {
+final class Duck extends Animal implements Swimmer {
   Duck(super.name);
 
   @override

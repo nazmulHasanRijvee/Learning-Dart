@@ -17,7 +17,7 @@ void main() {
 
   print(list3); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-  /// .map((e) => ) method which is an alternative of loop and used for list
+  /// .map((e) => ) method which is an alternative of for-loop and used for list
   // of maps. It returns a list of Iterables<T>
   // optimized
   List<Map<String, dynamic>> myList = [
@@ -38,5 +38,6 @@ void main() {
     0,
     (previousValue, element) => previousValue + element,
   );
+
   print(total); // 13
 }

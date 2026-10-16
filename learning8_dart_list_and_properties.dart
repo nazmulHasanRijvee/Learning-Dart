@@ -45,7 +45,7 @@ void main() {
 
   print(fruits);
 
-  /// .removeLast to remove the last item of the list
+  /// .removeLast() to remove the last item of the list
   final rmvList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   rmvList.removeLast();
 
@@ -94,7 +94,7 @@ void main() {
   // ungrowableList.removeLast(); // will throw error
   print(ungrowableList);
 
-  // Using List.filled method
+  // Using List.filled() method
   final ungrowableList2 = List.filled(4, 0, growable: false); // [0, 0, 0, 0]
 
   //ungrowableList2.add(10); // will show error
@@ -111,7 +111,7 @@ void main() {
 
   print(newList);
 
-  /// .reversed sorts the element in descending order
+  /// .reversed() sorts the element in descending order
   // And returns a list of Iterable<T> which is then converted to List using
   // .toList()
   newList = newList.reversed.toList();
@@ -166,14 +166,17 @@ void main() {
     3,
     (_) => List.filled(3, 0), // NEW list created for each row
   );
+
   matrix2[0][1] = 99;
   print(matrix2); // [[0, 99, 0], [0, 0, 0], [0, 0, 0]]  ← Only row 0 changed
 
   /// List copying not referring to the same memory address using [...list]
   // spread operator (...)
   List<int> myList2 = [1, 3, 5];
+
   var myList3 = [...myList2];
   print(myList3);
+
   myList2.addAll([5, 8]);
   print(myList3);
   // NOTE: Useful in Row()/Column() children: [...List] property

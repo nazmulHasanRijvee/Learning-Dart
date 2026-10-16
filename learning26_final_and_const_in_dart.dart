@@ -13,7 +13,7 @@ void main() {
   /// final keyword with list
   // But elements or [1, 2, 3] lists can be added using .add() and .addAll()
   // But reassigning or overwriting the list is not allowed
-  // myList = [1, 2] --> error
+  // myList = [1, 2] -> error
   final myList = [];
   myList.addAll([1, 3, 4]);
   print(myList);

@@ -66,7 +66,7 @@ void requiredNamedMethod(int age, String? name, {required double height}) {
 
 /// Optional parameters with named parameters
 // In named parameter just make the parameter nullable and it becomes optional
-// no required keyword or value assignment needed
+// No required keyword or value assignment needed
 void optionalNamedMethod({int age = 0, String? name, required double height}) {
   if (name != null) {
     print(
@@ -79,7 +79,7 @@ void optionalNamedMethod({int age = 0, String? name, required double height}) {
   }
 }
 
-/// Optional parameters using Default value with named parameters
+/// Optional parameters using Default value/argument with named parameters
 // Or we can assign a default value for the parameter in the named parameters
 // to make it an Optional Parameter. But it has a default value if already not assigned
 // Only works with optional parameters and more safe and less boiler-plate code then using nullable
@@ -133,3 +133,7 @@ void main() {
   // using optional parameter
   optionalNamedMethod2(age: 24, name: 'Nazmul', height: 5.121);
 }
+
+
+/// Records in Dart
+//

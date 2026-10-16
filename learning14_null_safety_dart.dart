@@ -34,7 +34,7 @@ void main() {
   int? age = 20;
 
   // ✅ Safe here because age is not null, ! tells dart I know this value is not null,
-  //if you’re wrong, it will crash at runtime
+  // if you’re wrong, it will crash at runtime
   // ignore: unnecessary_non_null_assertion
   int sureAge = age!;
 
@@ -44,6 +44,9 @@ void main() {
   token = "abc123"; // Must assign before use
 
   print(token); // ✅ Works fine
+
+  // NOTE: There's also null-aware insertion ?myWidget in collections for Flutter
+  // and null-aware spread operator ...?myList
 }
 
 late String token; // Sometimes we can’t initialize a variable immediately, but we promise to do it before using it

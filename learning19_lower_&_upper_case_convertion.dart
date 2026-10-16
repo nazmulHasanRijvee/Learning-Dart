@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   /// Converting to uppercase
-  String name1 = "hi, i'm nazmul";
+  String name1 = "hi, I'm nazmul";
   //  Using .toUpperCase to convert
   print(name1.toUpperCase());
 

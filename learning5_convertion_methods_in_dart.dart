@@ -57,17 +57,14 @@ void main() {
 
   // Converting Iterables (like from .map()) to List
   Set set2 = {23, 45, 61};
-  List list4 = set2
-      .map((e) => e + 1)
-      .toList(); // Iterable to List using toList()
-  List list5 = List.from(
-    set2.map((e) => e + 1),
-  ); // Iterable to List using List.from()
-  print('Iterable to List: toList: $list4, List.from: $list5');
 
-  List list6 = [1, 2, 2, 3];
-  Set set3 = list6.toSet(); // Result: {1, 2, 3}
-  print('List to Set: $set3');
+  // Iterable to List using toList()
+  List list4 = set2.map((e) => e + 1).toList();
+
+  // Iterable to List using List.from()
+  List list5 = List.from(set2.map((e) => e + 1));
+
+  print('Iterable to List: toList: $list4, List.from: $list5');
 
   /// 8. String splitting & joining
   // .split() turns String -> List. .join() turns List -> String.

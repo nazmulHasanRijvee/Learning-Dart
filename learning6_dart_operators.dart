@@ -26,18 +26,16 @@ void main() {
   print('a is less than b ${a < b}');
 
   /// Logical operators
-
   bool x = true, y = false;
 
-  print('x and y ${x && y}');
+  print('x and y ${x && y}'); // && -> and
 
   // ignore: dead_code
-  print('x or y ${x || y}');
+  print('x or y ${x || y}'); // || -> or
 
-  print('not x ${!x}');
+  print('not x ${!x}'); // ! -> not/inverse
 
   // Unary operators
-
   int v = 10;
 
   int c = -v;
@@ -47,6 +45,5 @@ void main() {
   c--; // c -1
 
   print(v);
-
   print(c);
 }

@@ -2,7 +2,7 @@ void main() {
   /// key value pair, each value is connected with key and both key and value
   /// can be any type
   Map<String, String> person = {
-    /// first data type is key and second one is value
+    /// first data type is for key and second one is for value
     'name': 'Nazmul',
     'age': '22',
     'address': 'Dhaka',

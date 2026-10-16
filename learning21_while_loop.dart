@@ -37,15 +37,19 @@ void main() {
 
   // Declaring the value to store the sum
   int totalOrderAmount = 0;
+
   // Declaring a variable for iterating through lists index
   int index2 = 0;
+
   // iterates through the each list and stores each map in each iteration
   while (index2 < orderList.length) {
     // Storing the maps in a variable in each iteration
     var order = orderList[index2];
+
     // accesses the value with amount key and adds up and as int gets those value as integer
     // cause it is in num.
     totalOrderAmount += order['amount'] as int;
+
     // incrementation
     index2++;
   }
