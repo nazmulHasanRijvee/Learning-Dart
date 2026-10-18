@@ -18,6 +18,7 @@ String todayOffer() {
 double calculateArea(double length, double width) {
   return length * width;
 }
+/// NOTE: There's Records too See Below
 
 /// Anonymous function or lambda function () {} or () =>
 var notificationCheck = () {
@@ -132,8 +133,19 @@ void main() {
   optionalNamedMethod2(age: 24, height: 5.121);
   // using optional parameter
   optionalNamedMethod2(age: 24, name: 'Nazmul', height: 5.121);
+
+
+  /// MULTIPLE RETURNS (the #1 real-world use of records) using Records
+  final (status, code) = getApiStatus();
+
+  print(status); // "Success"
+  print(code); // 200
 }
 
 
-/// Records in Dart
-//
+/// Returning multiple values using Records in Dart
+// They lets us return multiple values from a single function
+// without creating a separate class
+(String, int) getApiStatus() {
+  return ("Success", 200);
+}
